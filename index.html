@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Mariel Ollage | Web Developer & ML Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 flex flex-col;
+        }
+        .card img {
+            @apply w-full h-48 object-cover;
+        }
+        .card-content {
+            @apply p-6 flex-grow flex flex-col;
+        }
+        .card-content h3 {
+            @apply text-xl font-bold mb-2;
+        }
+        .card-content p {
+            @apply mb-4 flex-grow;
+        }
+        /* Style for gallery buttons */
+        .gallery-btn {
+            @apply absolute top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full hover:bg-opacity-60 transition-opacity duration-300;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Mariel Ollage</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors">Skills</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-600 hover:text-indigo-600">Skills</a>
+            <a href="#contact" class="block mt-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl font-bold text-gray-800 mb-4">Web Developer & System Designer</h1>
+                <p class="text-2xl text-indigo-600 mb-8">Machine Learning & AI Enthusiast</p>
+                <p class="max-w-3xl mx-auto text-lg mb-10">
+                    Highly motivated and detail-oriented Computer Science professional specializing in Machine Learning. Skilled in both frontend and backend web development, with strong proficiency in PHP.
+                </p>
+                <a href="#projects" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-indigo-700 transition-colors">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+                    <div class="md:w-1/3 text-center">
+                        <img src="projects/mariel-profile.jpg" alt="Mariel Ollage" class="rounded-full shadow-lg mx-auto w-64 h-64 object-cover">
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-lg mb-6">
+                            I am a dedicated Computer Science student at National University with a passion for machine learning and web development. My experience as a Co-Leader during my On-the-Job Training has provided me with valuable skills in team coordination, e-commerce platform management, and IT support. I am eager to apply my academic knowledge and hands-on experience to develop innovative, user-friendly websites and contribute to advancements in Reinforcement Learning AI.
+                        </p>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Education</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold">National University</h4>
+                            <p>BS in Computer Science, Machine Learning (2021-2026)</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Access Computer & Technical College</h4>
+                            <p>Information Communication Technology, Graduated with Honors (2019-2021)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="card" 
+                        data-title="Derma101 Website" 
+                        data-image="projects/derma101.jpg"
+                        data-description="A professional and elegant website developed for a dermatology clinic. The site features a clean user interface, service listings, and an appointment booking inquiry form. Built with modern front-end technologies to ensure a responsive and user-friendly experience.">
+                        <img src="projects/derma101.jpg" alt="Derma101 Website">
+                        <div class="card-content">
+                            <h3>Derma101 Website</h3>
+                            <p>A professional and elegant website developed for a dermatology clinic.</p>
+                            <button class="view-project-btn text-indigo-600 hover:underline mt-auto text-left font-semibold">View Project</button>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        data-title="Yielziey Music"
+                        data-image="projects/yielziey-music.jpg"
+                        data-description="A web application to find and search for your favorite music tracks easily. This project utilizes an external API to fetch music data and presents it in a clean, user-friendly interface.">
+                         <img src="projects/yielziey-music.jpg" alt="Yielziey Music Search">
+                        <div class="card-content">
+                            <h3>Yielziey Music Search</h3>
+                            <p>A web application to find and get latest of my music tracks easily.</p>
+                            <button class="view-project-btn text-indigo-600 hover:underline mt-auto text-left font-semibold">View Project</button>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        data-title="Supermario/Flappybird Reinforcement Learning"
+                        data-image="projects/rl-game.png"
+                        data-description="An academic and personal project exploring Reinforcement Learning by training an AI to play classic games. This project uses advanced algorithms like Deep Q-Networks (DQN) and NEAT with PyTorch to demonstrate machine learning capabilities in a dynamic environment.">
+                        <img src="projects/rl-game.png" alt="Reinforcement Learning Game">
+                        <div class="card-content">
+                            <h3>Supermario/Flappybird RL</h3>
+                            <p>A project exploring Reinforcement Learning with classic games using DQN, NEAT, and PyTorch.</p>
+                             <button class="view-project-btn text-indigo-600 hover:underline mt-auto text-left font-semibold">View Project</button>
+                        </div>
+                    </div>
+                     
+                    <!-- VEXILLUM CARD - UPDATED FOR GALLERY WITH VIDEO -->
+                    <div class="card"
+                        data-title="Vexillum Website"
+                        data-image="projects/vexillum.jpg,projects/vx-login.jpg,projects/vx.mp4"
+                        data-description="As the Head of System Design, I led the development of the official website for the Vexillum gaming organization. My responsibilities included architecting the system, ensuring functionality, and creating a user-friendly interface for the community.">
+                        <img src="projects/Vx.png" alt="Vexillum Website">
+                        <div class="card-content">
+                            <h3>Vexillum Website</h3>
+                            <p>Official website for the Vexillum project, where I led system design and development.</p>
+                            <button class="view-project-btn text-indigo-600 hover:underline mt-auto text-left font-semibold">View Project</button>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        data-title="Tech-Festival Card Matching Game"
+                        data-image="projects/card-game.png"
+                        data-description="An interactive and fun card matching game developed using JavaScript for a tech festival. The game features a clean UI, a scoring system, and was designed to be engaging for all attendees.">
+                        <img src="projects/card-game.png" alt="Card Matching Game">
+                        <div class="card-content">
+                            <h3>Card Matching Game</h3>
+                            <p>An interactive card matching game developed for a tech festival.</p>
+                             <button class="view-project-btn text-indigo-600 hover:underline mt-auto text-left font-semibold">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">PHP</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">JavaScript</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Python</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">C++/C#</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">R</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Java</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Laravel</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Bootstrap</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Git</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">VS Code</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">Sublime Text</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">MySQL</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold">SQLite</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">Figma</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">Canva</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">Wix</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="section-title">Get In Touch</h2>
+                 <p class="max-w-xl mx-auto text-lg mb-8">
+                     "I'm a passionate web developer and a machine learning enthusiast, always eager to learn, collaborate, and build innovative solutions. Whether you need a sleek website, AI-powered applications, or just want to discuss exciting tech ideas, feel free to reach out!"
+                 </p>
+                 <a href="mailto:marielollage0@gmail.com" class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-indigo-700 transition-colors">marielollage0@gmail.com</a>
+                 <p class="mt-4 text-gray-600">(+63) 952 440 8437</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Mariel Ollage. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal HTML - UPDATED FOR VIDEO SUPPORT -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3 p-6 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="relative">
+                <img id="modalImage" src="" alt="Project Image" class="w-full h-56 object-cover rounded-md mb-4">
+                <video id="modalVideo" class="w-full h-56 rounded-md mb-4 hidden" controls></video>
+                <button id="prevBtn" class="gallery-btn left-2 hidden">&#10094;</button>
+                <button id="nextBtn" class="gallery-btn right-2 hidden">&#10095;</button>
+            </div>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-2 text-gray-800"></h3>
+            <p id="modalDescription" class="text-gray-600"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript - UPDATED FOR VIDEO SUPPORT -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal and Gallery Logic
+        const viewProjectButtons = document.querySelectorAll('.view-project-btn');
+        const modal = document.getElementById('projectModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let galleryImages = [];
+        let currentImageIndex = 0;
+
+        function updateGalleryContent(src) {
+            const isVideo = src.endsWith('.mp4') || src.endsWith('.webm');
+            if (isVideo) {
+                modalImage.classList.add('hidden');
+                modalVideo.classList.remove('hidden');
+                modalVideo.src = src;
+            } else {
+                modalVideo.classList.add('hidden');
+                modalVideo.pause();
+                modalImage.classList.remove('hidden');
+                modalImage.src = src;
+            }
+        }
+
+        function updateGallery() {
+            updateGalleryContent(galleryImages[currentImageIndex]);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateGallery();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            updateGallery();
+        });
+
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.card');
+                const images = card.dataset.image.split(',');
+
+                modalTitle.textContent = card.dataset.title;
+                modalDescription.textContent = card.dataset.description;
+
+                if (images.length > 1) {
+                    galleryImages = images;
+                    currentImageIndex = 0;
+                    updateGallery();
+                    prevBtn.classList.remove('hidden');
+                    nextBtn.classList.remove('hidden');
+                } else {
+                    galleryImages = [];
+                    updateGalleryContent(images[0]);
+                    prevBtn.classList.add('hidden');
+                    nextBtn.classList.add('hidden');
+                }
+                
+                modal.classList.remove('hidden');
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modalVideo.pause();
+            modalVideo.src = ""; // Unload video source
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
